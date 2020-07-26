@@ -11,7 +11,7 @@ const PeoplePage = props => {
   }, []);
 
   const drowPeoplePage = () =>
-    getPeoplePage().then(data => setPeople(data.results));
+    getPeoplePage().then(({ data }) => setPeople(data.results));
 
   return (
     <ul className={S.list}>

@@ -1,19 +1,17 @@
+import axios from 'axios';
 const API_URL = 'https://swapi.dev/api/';
 
-export const getFilmsPage = () =>
-  fetch(`${API_URL}films`.replace('http', 'https')).then(res => res.json());
+axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
-export const getPeoplePage = () =>
-  fetch(`${API_URL}people`.replace('http', 'https')).then(res => res.json());
+export const getFilmsPage = () => axios.get(`${API_URL}films`);
 
-export const getPlanetsPage = () =>
-  fetch(`${API_URL}planets`.replace('http', 'https')).then(res => res.json());
+export const getPeoplePage = () => axios.get(`${API_URL}people`);
 
-export const getSpeciesPage = () =>
-  fetch(`${API_URL}species`.replace('http', 'https')).then(res => res.json());
+export const getPlanetsPage = () => axios.get(`${API_URL}planets`);
 
-export const getStarshipsPage = () =>
-  fetch(`${API_URL}starships`.replace('http', 'https')).then(res => res.json());
+export const getSpeciesPage = () => axios.get(`${API_URL}species`);
 
-export const getVehiclesPage = () =>
-  fetch(`${API_URL}vehicles`.replace('http', 'https')).then(res => res.json());
+export const getStarshipsPage = () => axios.get(`${API_URL}starships`);
+
+export const getVehiclesPage = () => axios.get(`${API_URL}vehicles`);

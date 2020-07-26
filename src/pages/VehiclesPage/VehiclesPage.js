@@ -11,7 +11,7 @@ const VehiclesPage = props => {
   }, []);
 
   const drowVehiclesPage = () =>
-    getVehiclesPage().then(data => setVehicles(data.results));
+    getVehiclesPage().then(({ data }) => setVehicles(data.results));
 
   return (
     <ul className={S.list}>

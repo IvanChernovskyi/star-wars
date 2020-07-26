@@ -11,7 +11,7 @@ const PalnetsPage = props => {
   }, []);
 
   const drowPlanetsPage = () =>
-    getPlanetsPage().then(data => setPalnets(data.results));
+    getPlanetsPage().then(({ data }) => setPalnets(data.results));
 
   return (
     <ul className={S.list}>

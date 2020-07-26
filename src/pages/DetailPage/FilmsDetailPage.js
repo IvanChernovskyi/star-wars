@@ -9,10 +9,10 @@ const FilmsDetailPage = props => {
   const [description, setDescription] = useState([]);
 
   useEffect(() => {
-    getSingleMovie(id);
+    getSinglFilms(id);
   }, []);
 
-  const getSingleMovie = async id => {
+  const getSinglFilms = async id => {
     const res = await fetch(`https://swapi.dev/api/films/${id}`);
     const resJson = await res.json();
     const resCharacters = resJson.characters.map(url =>
@@ -98,7 +98,7 @@ const FilmsDetailPage = props => {
         <ul className={S.list}>
           {transformToArrDescription.map(({ vehicles }) => (
             <li className={S.description__item} key={shortid()}>
-              {vehicles}
+              {`${vehicles}`.split(' ,')}
             </li>
           ))}
         </ul>
@@ -108,7 +108,7 @@ const FilmsDetailPage = props => {
         <ul className={S.list}>
           {transformToArrDescription.map(({ characters }) => (
             <li className={S.description__item} key={shortid()}>
-              {characters}
+              {`${characters}`.split(' ,')}
             </li>
           ))}
         </ul>
@@ -118,7 +118,7 @@ const FilmsDetailPage = props => {
         <ul className={S.list}>
           {transformToArrDescription.map(({ planets }) => (
             <li className={S.description__item} key={shortid()}>
-              {planets}
+              {`${planets}`.split(' ,')}
             </li>
           ))}
         </ul>
@@ -129,7 +129,7 @@ const FilmsDetailPage = props => {
         <ul className={S.list}>
           {transformToArrDescription.map(({ species }) => (
             <li className={S.description__item} key={shortid()}>
-              {species}
+              {`${species}`.split(' ,')}
             </li>
           ))}
         </ul>

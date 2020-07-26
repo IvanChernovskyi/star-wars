@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import shortid from 'shortid';
 import { Link } from 'react-router-dom';
-
 import { formatDate } from '../../helpers/helpers';
 import { getFilmsPage } from '../../services/Api';
 import S from '../../assets/style.module.css';
@@ -14,9 +13,7 @@ const FilmsPage = props => {
   }, []);
 
   const drowFilmsPage = () =>
-    getFilmsPage()
-      .then(res => res.json())
-      .then(data => setFilms(data.results));
+    getFilmsPage().then(({ data }) => setFilms(data.results));
 
   const { location } = props;
   return (

@@ -11,7 +11,7 @@ const StarshipsPage = props => {
   }, []);
 
   const drowStarshipsPage = () =>
-    getStarshipsPage().then(data => setStarships(data.results));
+    getStarshipsPage().then(({ data }) => setStarships(data.results));
 
   return (
     <ul className={S.list}>

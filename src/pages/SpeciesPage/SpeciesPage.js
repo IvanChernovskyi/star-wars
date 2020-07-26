@@ -11,7 +11,7 @@ const SpeciesPage = props => {
   }, []);
 
   const drowSpeciesPage = () =>
-    getSpeciesPage().then(data => setSpecies(data.results));
+    getSpeciesPage().then(({ data }) => setSpecies(data.results));
 
   return (
     <ul className={S.list}>
