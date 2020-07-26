@@ -1,7 +1,7 @@
 const API_URL = 'https://swapi.dev/api/';
 
 export const getFilmsPage = () =>
-  fetch(`${API_URL}films`.replace('http', 'http')).then(res => res.json());
+  fetch(`${API_URL}films`.replace('http', 'https')).then(res => res.json());
 
 export const getPeoplePage = () =>
   fetch(`${API_URL}people`.replace('http', 'https')).then(res => res.json());

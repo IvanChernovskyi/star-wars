@@ -14,7 +14,9 @@ const FilmsPage = props => {
   }, []);
 
   const drowFilmsPage = () =>
-    getFilmsPage().then(data => setFilms(data.results));
+    getFilmsPage()
+      .then(res => res.json())
+      .then(data => setFilms(data.results));
 
   const { location } = props;
   return (
