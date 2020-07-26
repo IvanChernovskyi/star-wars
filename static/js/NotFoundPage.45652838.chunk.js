@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{102:function(e,a,t){"use strict";t.r(a);var n=t(0),r=t.n(n),l=t(7),o=t(4);a.default=function(){return r.a.createElement(r.a.Fragment,null,r.a.createElement("h1",{style:{textAlign:"center"}},"Sorry, page not found",r.a.createElement("span",{role:"img","aria-label":"emoji"},"\ud83e\udd14"),r.a.createElement(l.c,{to:o.a.FILMS},"Back to Films Page")))}}}]);
+//# sourceMappingURL=NotFoundPage.45652838.chunk.js.map
