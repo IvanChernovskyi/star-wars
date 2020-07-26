@@ -1,0 +1,36 @@
+.list {
+  padding: 0;
+  list-style: none;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.list__title {
+  text-align: center;
+}
+
+.list__text {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main__info {
+  text-align: center;
+}
+
+.btn {
+  width: inherit;
+  cursor: pointer;
+  height: inherit;
+  font-size: 18px;
+  color: #4c8baf;
+  font-weight: bold;
+  font-family: Sans-Serif;
+  transition: color 1s ease;
+  border: 0;
+  background-color: #000000;
+}
+
+.btn:hover {
+  color: #ccc;
+}
