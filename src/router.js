@@ -5,4 +5,5 @@ export default {
   PLANETS: '/planets',
   VIHICLES: '/vehicles ',
   STARSHIPS: '/starships',
+  test: ''
 };
